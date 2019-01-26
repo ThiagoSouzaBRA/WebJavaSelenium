@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/feature/input_forms", //Local onde est� salva as features
 		glue = "br.inmetrics.steps.inputforms", //Pacote onde est� salvo os steps
-		tags = {"~@ignore"}, //Nome da tag que quero executar (As tags ficam localizadas nas features)
+		tags = {"@testar"}, //Nome da tag que quero executar (As tags ficam localizadas nas features)
 		plugin = {"pretty", "html:target/report-html"}, //Ativar para gerar relat�rio. PRETTY: relat�rio no console. HTML: gera relat�rio HTML
 		monochrome = true, //Remover caracteres especiais do console
 		snippets = SnippetType.CAMELCASE, //Gerar nomes dos m�todos em camelcase
