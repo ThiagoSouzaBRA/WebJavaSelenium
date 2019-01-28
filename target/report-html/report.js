@@ -13,17 +13,10 @@ formatter.feature({
   "keyword": "Funcionalidade"
 });
 formatter.scenario({
-<<<<<<< HEAD
-  "line": 12,
-  "name": "Multiple Checkbox Demo",
-  "description": "",
-  "id": "testando-checkbox;multiple-checkbox-demo",
-=======
   "line": 18,
   "name": "Multi Select List Demo 1",
   "description": "",
   "id": "testar-selectdropdownlist;multi-select-list-demo-1",
->>>>>>> 0e97075e3f254b047bdecee6c474c08c8c144bab
   "type": "scenario",
   "keyword": "Cenario",
   "tags": [
@@ -34,20 +27,6 @@ formatter.scenario({
   ]
 });
 formatter.step({
-<<<<<<< HEAD
-  "line": 13,
-  "name": "que estou na página Checkbox Demo",
-  "keyword": "Dado "
-});
-formatter.step({
-  "line": 14,
-  "name": "marcar todos os checkbox",
-  "keyword": "Quando "
-});
-formatter.step({
-  "line": 15,
-  "name": "verificar se o botão apresenta a mensagem Uncheck All",
-=======
   "line": 19,
   "name": "que estou na página Select Dropdown List",
   "keyword": "Dado "
@@ -65,68 +44,35 @@ formatter.step({
 formatter.step({
   "line": 22,
   "name": "deverá ser apresentada a mensagem Options selected are : California,Ohio,Texas",
->>>>>>> 0e97075e3f254b047bdecee6c474c08c8c144bab
   "keyword": "Entao "
 });
 formatter.match({
   "location": "SelectDropdownListSteps.que_estou_na_página_Select_Dropdown_List()"
 });
 formatter.result({
-<<<<<<< HEAD
-  "duration": 8384150400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CheckboxDemoSteps.marcarTodosOsCheckbox()"
-});
-formatter.result({
-  "duration": 417330900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CheckboxDemoSteps.verificarSeOBotãoApresentaAMensagemUncheckAll()"
-});
-formatter.result({
-  "duration": 38948200,
-  "status": "passed"
-});
-formatter.uri("SimpleFormDemo.feature");
-formatter.feature({
-  "comments": [
-    {
-      "line": 1,
-      "value": "#language: pt"
-    }
-  ],
-  "line": 3,
-  "name": "Testando Formulário",
-  "description": "",
-  "id": "testando-formulário",
-  "keyword": "Funcionalidade"
-=======
-  "duration": 13161525813,
+  "duration": 9041171900,
   "status": "passed"
 });
 formatter.match({
   "location": "SelectDropdownListSteps.selecionar_California_Ohio_e_Texas()"
 });
 formatter.result({
-  "duration": 379795901,
+  "duration": 450065900,
   "status": "passed"
 });
 formatter.match({
   "location": "SelectDropdownListSteps.clicar_em_Get_All_Selected()"
 });
 formatter.result({
-  "duration": 69554731,
+  "duration": 140149100,
   "status": "passed"
 });
 formatter.match({
   "location": "SelectDropdownListSteps.deverá_ser_apresentada_a_mensagem_Options_selected_are_California_Ohio_Texas()"
 });
 formatter.result({
-  "duration": 42483548,
-  "status": "passed"
->>>>>>> 0e97075e3f254b047bdecee6c474c08c8c144bab
+  "duration": 98781100,
+  "error_message": "junit.framework.ComparisonFailure: expected:\u003c...ions selected are : [California,]Ohio,Texas\u003e but was:\u003c...ions selected are : []Ohio,Texas\u003e\r\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\r\n\tat br.inmetrics.steps.inputforms.SelectDropdownListSteps.deverá_ser_apresentada_a_mensagem_Options_selected_are_California_Ohio_Texas(SelectDropdownListSteps.java:90)\r\n\tat ✽.Entao deverá ser apresentada a mensagem Options selected are : California,Ohio,Texas(SelectDropdownList.feature:22)\r\n",
+  "status": "failed"
 });
 });
