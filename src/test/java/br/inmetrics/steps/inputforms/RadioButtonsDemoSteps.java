@@ -21,6 +21,10 @@ public class RadioButtonsDemoSteps {
 		System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.seleniumeasy.com/test/basic-radiobutton-demo.html");
+	    
+		if(driver.findElement(By.xpath("//h3[text()='This is again simple example to start working with radio buttons using Selenium.']")) == null){
+			Assert.assertTrue(false);
+		}
 	}
 
 	@Quando("^selecionar Male$")

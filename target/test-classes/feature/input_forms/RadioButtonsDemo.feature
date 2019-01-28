@@ -3,12 +3,13 @@
 
 Funcionalidade: Testar RadioButtonsDemo
 
+@ignore
 Cenario: Radio Button Demo
          Dado que estou na página Radio Buttons Demo
          Quando selecionar Male
          E clicar em Get Checked value
          Entao deverá ser apresentada a mensagem “Radio button 'Male' is checked”
-
+@ignore
 Cenario: Group Radio Buttons Demo
          Dado que estou na página Radio Buttons Demo
          Quando selecionar Female 
