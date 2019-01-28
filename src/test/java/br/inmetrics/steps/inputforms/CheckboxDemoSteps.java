@@ -1,5 +1,6 @@
 package br.inmetrics.steps.inputforms;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -7,6 +8,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
+import junit.framework.Assert;
 
 public class CheckboxDemoSteps {
 
@@ -16,42 +18,36 @@ public class CheckboxDemoSteps {
 	public void queEstouNaPáginaCheckboxDemo() throws Throwable {
 		System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe"); //Localização do driver
 		driver = new ChromeDriver(); //Instancia WebDriver
-		driver.get("https://srbarriga.herokuapp.com"); //Iniciar navegador no link X
+		driver.get("https://www.seleniumeasy.com/test/basic-checkbox-demo.html"); //Iniciar navegador no link X
 	}
 	
 	@Quando("^clicar em Click on this check box$")
 	public void clicarEmClickOnThisCheckBox() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    driver.findElement(By.id("isAgeSelected")).click();
 	}
 
 	@Entao("^deverá ser apresentada a mensagem Success - Check box is checked$")
 	public void deveráSerApresentadaAMensagemSuccessCheckBoxIsChecked() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    String msg = driver.findElement(By.id("txtAge")).getText();
+	    Assert.assertEquals("Success - Check box is checked", msg);
 	}
 
 	@Quando("^clicar no botão Check All$")
 	public void clicarNoBotãoCheckAll() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    driver.findElement(By.id("check1")).click();
 	}
 
-	@Entao("^verificar se todos os checkbox’s foram marcados$")
-	public void verificarSeTodosOsCheckboxSForamMarcados() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	@Quando("^marcar todos os checkbox$")
+	public void marcarTodosOsCheckbox() throws Throwable {
+	    driver.findElement(By.xpath("//label[text()='Option 1']")).click();
+	    driver.findElement(By.xpath("//label[text()='Option 2']")).click();
+	    driver.findElement(By.xpath("//label[text()='Option 3']")).click();
+	    driver.findElement(By.xpath("//label[text()='Option 4']")).click();
 	}
 
-	@Quando("^clicar no botão Uncheck All$")
-	public void clicarNoBotãoUncheckAll() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
-
-	@Entao("^verificar se todos os checkbox’s foram desmarcados$")
-	public void verificarSeTodosOsCheckboxSForamDesmarcados() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	@Entao("^verificar se o botão apresenta a mensagem Uncheck All$")
+	public void verificarSeOBotãoApresentaAMensagemUncheckAll() throws Throwable {
+	    String msgBtn = driver.findElement(By.id("check1")).getAttribute("value");
+	    Assert.assertEquals("Uncheck All", msgBtn);
 	}
 }

@@ -13,47 +13,61 @@ formatter.feature({
   "keyword": "Funcionalidade"
 });
 formatter.scenario({
-  "line": 5,
-  "name": "Single Checkbox Demo",
+  "line": 12,
+  "name": "Multiple Checkbox Demo",
   "description": "",
-  "id": "testando-checkbox;single-checkbox-demo",
+  "id": "testando-checkbox;multiple-checkbox-demo",
   "type": "scenario",
   "keyword": "Cenario"
 });
 formatter.step({
-  "line": 7,
+  "line": 13,
   "name": "que estou na página Checkbox Demo",
   "keyword": "Dado "
 });
 formatter.step({
-  "line": 9,
-  "name": "clicar em Click on this check box",
+  "line": 14,
+  "name": "marcar todos os checkbox",
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 11,
-  "name": "deverá ser apresentada a mensagem Success - Check box is checked",
+  "line": 15,
+  "name": "verificar se o botão apresenta a mensagem Uncheck All",
   "keyword": "Entao "
 });
 formatter.match({
   "location": "CheckboxDemoSteps.queEstouNaPáginaCheckboxDemo()"
 });
 formatter.result({
-  "duration": 6363947600,
+  "duration": 8384150400,
   "status": "passed"
 });
 formatter.match({
-  "location": "CheckboxDemoSteps.clicarEmClickOnThisCheckBox()"
+  "location": "CheckboxDemoSteps.marcarTodosOsCheckbox()"
 });
 formatter.result({
-  "duration": 3433500,
-  "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat br.inmetrics.steps.inputforms.CheckboxDemoSteps.clicarEmClickOnThisCheckBox(CheckboxDemoSteps.java:25)\r\n\tat ✽.Quando clicar em Click on this check box(CheckboxDemo.feature:9)\r\n",
-  "status": "pending"
+  "duration": 417330900,
+  "status": "passed"
 });
 formatter.match({
-  "location": "CheckboxDemoSteps.deveráSerApresentadaAMensagemSuccessCheckBoxIsChecked()"
+  "location": "CheckboxDemoSteps.verificarSeOBotãoApresentaAMensagemUncheckAll()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 38948200,
+  "status": "passed"
+});
+formatter.uri("SimpleFormDemo.feature");
+formatter.feature({
+  "comments": [
+    {
+      "line": 1,
+      "value": "#language: pt"
+    }
+  ],
+  "line": 3,
+  "name": "Testando Formulário",
+  "description": "",
+  "id": "testando-formulário",
+  "keyword": "Funcionalidade"
 });
 });
