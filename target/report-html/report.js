@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Table/TableDataSearch.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("alert_and_modals/JavascriptAlerts.feature");
 formatter.feature({
   "comments": [
     {
@@ -7,77 +7,95 @@ formatter.feature({
     }
   ],
   "line": 3,
-  "name": "Testando Tables",
+  "name": "Javascript Alerts",
   "description": "",
-  "id": "testando-tables",
+  "id": "javascript-alerts",
   "keyword": "Funcionalidade"
 });
 formatter.scenario({
-  "line": 23,
-  "name": "Listed Users - Pesquisar",
+  "line": 12,
+  "name": "Java Script Alert Box",
   "description": "",
-  "id": "testando-tables;listed-users---pesquisar",
+  "id": "javascript-alerts;java-script-alert-box",
   "type": "scenario",
   "keyword": "Cenário"
 });
 formatter.step({
-  "line": 24,
-  "name": "que estou na página Table Data Search",
+  "line": 13,
+  "name": "que estou na página Javascript Alerts",
   "keyword": "Dado "
 });
 formatter.step({
-  "line": 25,
-  "name": "clicar no botão filter",
+  "line": 14,
+  "name": "clicar no botão click for prompt box",
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 26,
-  "name": "pesquisar pelo username \"jacobs\"",
+  "line": 15,
+  "name": "preencher o textbox do alerta com \"Inmetrics\"",
   "keyword": "E "
 });
 formatter.step({
-  "line": 27,
-  "name": "a tabela deverá exibir apenas o usuário \"jacobs\"",
+  "line": 16,
+  "name": "clicar em \"OK\" no alerta",
+  "keyword": "E "
+});
+formatter.step({
+  "line": 17,
+  "name": "deverá ser exibida mensagem \"You have entered \u0027Inmetrics\u0027 !\"",
   "keyword": "Então "
 });
 formatter.match({
-  "location": "TableDataSearchSteps.queEstouNaPáginaTableDataSearch()"
+  "location": "JavascriptAlertsSteps.queEstouNaPáginaJavascriptAlerts()"
 });
 formatter.result({
-  "duration": 8476717900,
+  "duration": 8433434200,
   "status": "passed"
 });
 formatter.match({
-  "location": "TableDataSearchSteps.clicarNoBotãoFilter()"
+  "location": "JavascriptAlertsSteps.clicarNoBotãoClickForPromptBox()"
 });
 formatter.result({
-  "duration": 129270600,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "jacobs",
-      "offset": 25
-    }
-  ],
-  "location": "TableDataSearchSteps.pesquisarPeloUsername(String)"
-});
-formatter.result({
-  "duration": 268705600,
+  "duration": 117844500,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "jacobs",
-      "offset": 41
+      "val": "Inmetrics",
+      "offset": 35
     }
   ],
-  "location": "TableDataSearchSteps.aTabelaDeveráExibirApenasOUsuário(String)"
+  "location": "JavascriptAlertsSteps.preencherOTextboxDoAlertaCom(String)"
 });
 formatter.result({
-  "duration": 66343000,
+  "duration": 19264500,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "OK",
+      "offset": 11
+    }
+  ],
+  "location": "JavascriptAlertsSteps.clicarEmNoAlerta(String)"
+});
+formatter.result({
+  "duration": 15613300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "You have entered \u0027Inmetrics\u0027 !",
+      "offset": 29
+    }
+  ],
+  "location": "JavascriptAlertsSteps.deveráSerExibidaMensagem(String)"
+});
+formatter.result({
+  "duration": 86815700,
   "status": "passed"
 });
 formatter.uri("input_forms/CheckboxDemo.feature");
@@ -134,6 +152,34 @@ formatter.feature({
   "name": "Testando Formulário",
   "description": "",
   "id": "testando-formulário",
+  "keyword": "Funcionalidade"
+});
+formatter.uri("progress_bars_sliders/BootstrapProgressBar.feature");
+formatter.feature({
+  "comments": [
+    {
+      "line": 1,
+      "value": "#language: pt"
+    }
+  ],
+  "line": 3,
+  "name": "Bootstrap Progress Bar",
+  "description": "",
+  "id": "bootstrap-progress-bar",
+  "keyword": "Funcionalidade"
+});
+formatter.uri("table/TableDataSearch.feature");
+formatter.feature({
+  "comments": [
+    {
+      "line": 1,
+      "value": "#language: pt"
+    }
+  ],
+  "line": 3,
+  "name": "Testando Tables",
+  "description": "",
+  "id": "testando-tables",
   "keyword": "Funcionalidade"
 });
 });

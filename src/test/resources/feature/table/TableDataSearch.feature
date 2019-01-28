@@ -20,6 +20,7 @@ Cenário: Listed Users
 	Quando clicar no botão filter
 	Então verificar se os campos "#" "Username" "First Name" "Last Name" estão ativados
 
+@ignore
 Cenário: Listed Users - Pesquisar
 	Dado que estou na página Table Data Search
 	Quando clicar no botão filter
