@@ -8,6 +8,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class) //Definir para o JUnit rodar com Cucumber
 @CucumberOptions(
+
 		features = "src/test/resources/feature", //Local onde est� salva as features
 		glue = "br.inmetrics.steps", //Pacote onde est� salvo os steps
 		tags = {"~@ignore"}, //Nome da tag que quero executar (As tags ficam localizadas nas features)

@@ -22,6 +22,10 @@ public class SelectDropdownListSteps {
 		System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html");
+		
+		if(driver.findElement(By.xpath("//h3[text()='This would be your first example on select dropd down list to with Selenium.']")) == null){
+			Assert.assertTrue(false);
+		}
 	}
 
 	@Quando("^selecionar Friday$")
@@ -66,11 +70,12 @@ public class SelectDropdownListSteps {
 	public void selecionar_California_Ohio_e_Texas() throws Throwable {
 		Actions action = new Actions(driver);
 		
+		WebElement tabela 	= driver.findElement(By.xpath("//*[@id=\"multi-select\"]"));
         WebElement california 	= driver.findElement(By.xpath("//option[@value='California']"));
         WebElement ohio			= driver.findElement(By.xpath("//option[@value='Ohio']"));
         WebElement texas 		= driver.findElement(By.xpath("//option[@value='Texas']"));
         
-        action.keyDown(Keys.CONTROL).click(california).click(ohio).click(texas).build().perform();
+        action.keyDown(Keys.CONTROL).click(tabela).click(tabela).click(california).click(ohio).click(texas).build().perform();
         
 	}
 
