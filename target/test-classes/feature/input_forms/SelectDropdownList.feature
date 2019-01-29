@@ -1,6 +1,10 @@
 #language: pt
 
 Funcionalidade: Testar SelectDropdownList
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0f24e92f2a1387b82fd0f389a1d0a73afacf2b03
 @ignore
 Cenario: Select List Demo
          Dado que estou na página Select Dropdown List
@@ -14,6 +18,10 @@ Cenario: Multi Select List Demo 1
          E clicar em First Selected
          Entao deverá ser apresentada a mensagem First selected option is : New York
 
+<<<<<<< HEAD
+=======
+@ignore
+>>>>>>> 0f24e92f2a1387b82fd0f389a1d0a73afacf2b03
 Cenario: Multi Select List Demo 1
         Dado que estou na página Select Dropdown List
         Quando selecionar California, Ohio e Texas
