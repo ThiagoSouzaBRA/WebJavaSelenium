@@ -2,7 +2,7 @@
 
 Funcionalidade: Testar SelectDropdownList
 
-
+@ignore
 Cenario: Select List Demo
          Dado que estou na página Select Dropdown List
          Quando selecionar Friday

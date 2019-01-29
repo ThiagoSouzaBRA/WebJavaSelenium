@@ -2,6 +2,7 @@
 
 Funcionalidade: testar Range Sliders 
 
+@ignore
 Cenario: RangeSliderCinza
     Dado que estou na pagina Range Sliders
     Quando mover barra da RangeSliderCinza
