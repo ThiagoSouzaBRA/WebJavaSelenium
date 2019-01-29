@@ -8,8 +8,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class) //Definir para o JUnit rodar com Cucumber
 @CucumberOptions(
-		features = "src/test/resources/feature/alerts_and_modals", //Local onde est� salva as features
-		glue = "br.inmetrics.steps.alertsandmodals", //Pacote onde est� salvo os steps
+		features = "src/test/resources/feature/", //Local onde est� salva as features
+		glue = "br.inmetrics.steps.inputforms", //Pacote onde est� salvo os steps
 		tags = {"~@ignore"}, //Nome da tag que quero executar (As tags ficam localizadas nas features)
 		plugin = {"pretty", "html:target/report-html"}, //Ativar para gerar relat�rio. PRETTY: relat�rio no console. HTML: gera relat�rio HTML
 		monochrome = true, //Remover caracteres especiais do console

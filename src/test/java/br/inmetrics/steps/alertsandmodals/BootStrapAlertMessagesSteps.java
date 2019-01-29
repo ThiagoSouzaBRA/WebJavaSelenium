@@ -51,9 +51,19 @@ public class BootStrapAlertMessagesSteps {
 	public void clicar_em_alerta_com_classificação(String arg1) throws Throwable {
 		
 		int qtd = driver.findElements(By.xpath("//button[contains(@class, '" + arg1 + "')]")).size();
-		System.out.println(qtd);
 		for(int i=1; i <= qtd; i++){
 			driver.findElement(By.xpath("//button[contains(@class, '" + arg1 + "')]["+i+"]")).click();;
+		}
+	}
+	
+	@Entao("^aparecer somente alertas \"([^\"]*)\"$")
+	public void aparecerSomenteAlertas(String arg1) throws Throwable {
+		int qtd = driver.findElements(By.xpath("//button[contains(@class, '" + arg1 + "')]")).size();
+		for(int i=1; i <= qtd; i++){
+			if(driver.findElement(By.xpath("//button[contains(@class, '" + arg1 + "')]["+i+"]")).isDisplayed() != true){
+				Assert.assertTrue(false);
+			}
+			
 		}
 	}
 
