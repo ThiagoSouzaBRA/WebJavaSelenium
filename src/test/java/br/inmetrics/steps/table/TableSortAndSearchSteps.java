@@ -58,10 +58,10 @@ public class TableSortAndSearchSteps {
 				break;
 		}
 		
-		
-		
 		Assert.assertTrue(driver.findElement(By.xpath("//td[text()='" + arg1 + "'][" + c + "]")) != null);
 		
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 	@Quando("^mudar ordem do campo \"([^\"]*)\"$")
@@ -74,6 +74,9 @@ public class TableSortAndSearchSteps {
 	@Entao("^deverá ser apresentado no campo \"([^\"]*)\"$")
 	public void deverá_ser_apresentado_nome_em_ordem_decrescente(String arg1) throws Throwable {
 		driver.findElement(By.xpath("//th[text()='" + arg1 + "'][//th[@class='sorting_desc']]")).click();
+		
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 	@Quando("^clicar no campo List$")
@@ -89,13 +92,15 @@ public class TableSortAndSearchSteps {
 
 	@Entao("^deverá ser apresentado (\\d+) quantidades$")
 	public void deverá_ser_apresentado_quantidades(int arg1) throws Throwable {
-	    
 		for(int i=1;i >= arg1;i++){
 
 	    	if(driver.findElement(By.xpath("//tr[" + i + "]")) == null){
 	    		Assert.assertTrue(false);
 	    	}
 	    }
+		
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 }

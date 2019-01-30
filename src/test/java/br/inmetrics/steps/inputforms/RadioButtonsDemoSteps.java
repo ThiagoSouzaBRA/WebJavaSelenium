@@ -46,6 +46,8 @@ public class RadioButtonsDemoSteps {
 		
 		Assert.assertEquals("Radio button 'Male' is checked", valor);
 		
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 	
 	@Quando("^selecionar Female$")
@@ -82,6 +84,8 @@ public class RadioButtonsDemoSteps {
 		
 		Assert.assertEquals(encontrar, valor);
 	    
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 	

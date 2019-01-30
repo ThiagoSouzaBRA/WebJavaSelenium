@@ -35,6 +35,9 @@ public class SimpleFormDemoSteps {
 	public void deveráSerApresentadaAMensagemYourMessageTreinamentoInmetrics() throws Throwable {
 	    String msg = driver.findElement(By.id("display")).getText();
 	    Assert.assertEquals("Treinamento Inmetrics", msg);
+	    
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 	@Quando("^preencher o campo A com “(\\d+)” e o campo B com “(\\d+)”$")
@@ -52,5 +55,8 @@ public class SimpleFormDemoSteps {
 	public void deveráSerApresentadaAMensagemTotalAB(String arg1) throws Throwable {
 	    String total = driver.findElement(By.id("displayvalue")).getText();
 	    Assert.assertEquals(arg1, total);
+	    
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 }

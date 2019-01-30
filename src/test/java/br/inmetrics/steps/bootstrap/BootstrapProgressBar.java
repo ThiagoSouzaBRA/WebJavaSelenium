@@ -42,5 +42,7 @@ public class BootstrapProgressBar {
 			xPorc = xPorc.substring(0, xPorc.indexOf("%"));
 	    	x = Integer.parseInt(xPorc);
 	    }
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 }

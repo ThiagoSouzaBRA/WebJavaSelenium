@@ -49,8 +49,9 @@ public class BootstrapModalSteps {
 	public void fechar_aba_Modal_Title() throws Throwable {
 	    if(driver.findElement(By.xpath("//*[@id=\"myModal0\"]/div/div/div[1]/h4")).isDisplayed()){
 	    	Assert.assertTrue(false);
-	    	
 	    }
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 	
 	@Quando("^clicar em Launch Modal dentro de Multiple Modal Example$")
@@ -76,6 +77,8 @@ public class BootstrapModalSteps {
 		if(driver.findElement(By.xpath("//h4[text()='First Modal']")).isDisplayed()){
 			Assert.assertTrue(false);
 		}
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 	
 	@Quando("^clicar no botão Launch Modal$")

@@ -31,6 +31,9 @@ public class TableDataSearchSteps {
 	@Então("^a tebela deverá exibir apenas a Task \"([^\"]*)\"$")
 	public void aTebelaDeveráExibirApenasATask(String arg1) throws Throwable {
 	    Assert.assertTrue(driver.findElement(By.xpath("//tbody/tr/td[text()='"+ arg1 +"']")).isDisplayed());
+	    
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 	
 	@Quando("^clicar no botão filter$")
@@ -44,6 +47,9 @@ public class TableDataSearchSteps {
 	    Assert.assertTrue(driver.findElement(By.xpath("//thead/tr/th/input[@placeholder='"+ username +"']")).isEnabled());
 	    Assert.assertTrue(driver.findElement(By.xpath("//thead/tr/th/input[@placeholder='"+ firstName +"']")).isEnabled());
 	    Assert.assertTrue(driver.findElement(By.xpath("//thead/tr/th/input[@placeholder='"+ lastName +"']")).isEnabled());
+	    
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 	
 	@Quando("^pesquisar pelo username \"([^\"]*)\"$")

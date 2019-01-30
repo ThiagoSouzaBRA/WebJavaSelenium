@@ -30,6 +30,9 @@ public class CheckboxDemoSteps {
 	public void deveráSerApresentadaAMensagemSuccessCheckBoxIsChecked() throws Throwable {
 	    String msg = driver.findElement(By.id("txtAge")).getText();
 	    Assert.assertEquals("Success - Check box is checked", msg);
+	    
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 	@Quando("^clicar no botão Check All$")
@@ -49,5 +52,8 @@ public class CheckboxDemoSteps {
 	public void verificarSeOBotãoApresentaAMensagemUncheckAll() throws Throwable {
 	    String msgBtn = driver.findElement(By.id("check1")).getAttribute("value");
 	    Assert.assertEquals("Uncheck All", msgBtn);
+	    
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 }

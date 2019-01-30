@@ -56,6 +56,8 @@ public class BootStrapDateSteps {
 		if(driver.findElement(By.xpath("//*[@id=\"sandbox-container1\"]/div/input")).getAttribute("value") != null){
 			Assert.assertTrue(false);
 		}
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 	
 
@@ -81,6 +83,9 @@ public class BootStrapDateSteps {
 		String dataBox = driver.findElement(By.xpath("//input[@class='form-control'][1]")).getAttribute("value");
 		
 		Assert.assertEquals(dataAtual, dataBox);
+		
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 	@Quando("^clicar em Clear$")
@@ -106,6 +111,9 @@ public class BootStrapDateSteps {
 		
 		Assert.assertTrue(driver.findElement(By.xpath("//input[@placeholder='Start date']")).getAttribute("value").isEmpty());
 		
+		Thread.currentThread().sleep(5000);
+		driver.quit();
+		
 	}
 
 	@Quando("^selecionar alguma data$")
@@ -121,6 +129,9 @@ public class BootStrapDateSteps {
 	    String boxsecun = driver.findElement(By.xpath("//input[@placeholder='End date']")).getAttribute("value");
 	    
 	    Assert.assertEquals(boxprim, boxsecun);
+	    
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 }

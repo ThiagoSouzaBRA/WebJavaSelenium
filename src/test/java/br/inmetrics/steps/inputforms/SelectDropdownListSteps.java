@@ -41,6 +41,9 @@ public class SelectDropdownListSteps {
 	   String comparar = "Day selected :- Friday";
 	   String encontrar = driver.findElement(By.xpath("//p[@class='selected-value']")).getText();
 	   Assert.assertEquals(comparar, encontrar);
+	   
+	   Thread.currentThread().sleep(5000);
+	   driver.quit();
 	}
 
 	@Quando("^selecionar New York$")
@@ -63,7 +66,9 @@ public class SelectDropdownListSteps {
 		   String comparar = "First selected option is : New York";
 		   String encontrar = driver.findElement(By.xpath("//p[@class='getall-selected']")).getText();
 		   Assert.assertEquals(comparar, encontrar);
-		
+		   
+		   Thread.currentThread().sleep(5000);
+		   driver.quit();
 	}
 
 	@Quando("^selecionar California, Ohio e Texas$")
@@ -94,6 +99,8 @@ public class SelectDropdownListSteps {
 		   String encontrar = driver.findElement(By.xpath("//p[@class='getall-selected']")).getText();
 		   Assert.assertEquals(comparar, encontrar);
 		   
+		   Thread.currentThread().sleep(5000);
+		   driver.quit();
 	}
 	
 }

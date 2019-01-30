@@ -77,14 +77,12 @@ public class FilterTableSteps {
 		String green = driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/section/div/div/div[2]/div[2]/table/tbody/tr[1]/td[3]/div/div/h4/span")).getText();
 	    Assert.assertEquals("(Green)", green);
 	    
-	    driver.quit();
-	       
-	  
-	    
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
+
 	}
 	
-	 //public void tearDown(){
-      // driver.quit();
+
     }
 	 
 

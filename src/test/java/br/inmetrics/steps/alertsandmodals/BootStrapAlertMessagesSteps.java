@@ -45,6 +45,8 @@ public class BootStrapAlertMessagesSteps {
 				Assert.assertTrue(false);
 			}
 		}
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 	@Quando("^clicar em alerta com classificação \"([^\"]*)\"$")
@@ -63,8 +65,9 @@ public class BootStrapAlertMessagesSteps {
 			if(driver.findElement(By.xpath("//button[contains(@class, '" + arg1 + "')]["+i+"]")).isDisplayed() != true){
 				Assert.assertTrue(false);
 			}
-			
 		}
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 }

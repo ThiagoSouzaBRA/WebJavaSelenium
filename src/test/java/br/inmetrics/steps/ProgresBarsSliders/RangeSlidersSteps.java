@@ -62,7 +62,10 @@ public class RangeSlidersSteps {
 	@Entao("^verificar se valor da RangeSliderLaranja foi alterado$")
 	public void verificar_se_valor_da_RangeSliderLaranja_foi_alterado() throws Throwable {
 		String laranja = driver.findElement(By.id("rangeWarning")).getText();
-	    Assert.assertEquals("100", laranja);	
+	    Assert.assertEquals("100", laranja);
+	    
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 }

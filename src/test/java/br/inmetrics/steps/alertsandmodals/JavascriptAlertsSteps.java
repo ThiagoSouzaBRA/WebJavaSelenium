@@ -41,6 +41,8 @@ public class JavascriptAlertsSteps {
 	public void deveráSerExibidaAMensagem(String arg1) throws Throwable {
 		String msg = driver.findElement(By.xpath("//p[@id='confirm-demo']")).getText();
 	    Assert.assertEquals(arg1, msg);
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 	
 	@Quando("^clicar no botão click for prompt box$")
@@ -57,5 +59,7 @@ public class JavascriptAlertsSteps {
 	public void deveráSerExibidaMensagem(String arg1) throws Throwable {
 	    String msg = driver.findElement(By.xpath("//p[@id='prompt-demo']")).getText();
 	    Assert.assertEquals(arg1, msg);
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 }
