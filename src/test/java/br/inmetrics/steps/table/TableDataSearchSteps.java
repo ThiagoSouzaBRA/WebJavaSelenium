@@ -60,5 +60,8 @@ public class TableDataSearchSteps {
 	@Então("^a tabela deverá exibir apenas o usuário \"([^\"]*)\"$")
 	public void aTabelaDeveráExibirApenasOUsuário(String arg1) throws Throwable {
 	    Assert.assertTrue(driver.findElement(By.xpath("//tbody/tr/td[text()='"+ arg1 +"']")).isDisplayed());
+	    
+	    Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 }

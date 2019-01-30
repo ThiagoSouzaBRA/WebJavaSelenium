@@ -107,6 +107,8 @@ public class BootstrapModalSteps {
 		
 		driver.findElement(By.xpath("(//a[text()='Close'])[3]")).sendKeys(Keys.ENTER);
 		
+		Thread.currentThread().sleep(5000);
+		driver.quit();
 	}
 
 }
