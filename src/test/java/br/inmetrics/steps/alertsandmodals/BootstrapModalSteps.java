@@ -22,9 +22,8 @@ public class BootstrapModalSteps {
 		driver = new ChromeDriver();
 		driver.get("https://www.seleniumeasy.com/test/bootstrap-modal-demo.html");
 		
-		if(driver.findElement(By.xpath("//h2[text()='Bootstrap Modal Example for Automation']")) == null){
-			Assert.assertTrue(false);
-		}
+		Assert.assertTrue((driver.findElement(By.xpath("//h2[text()='Bootstrap Modal Example for Automation']")).isEnabled()));
+		
 		
 	}
 	
@@ -42,6 +41,7 @@ public class BootstrapModalSteps {
 	
 	@Quando("^enter no botão Save Changes First$")
 	public void clicar_no_botão_Save_Changes() throws Throwable {
+		Thread.currentThread().sleep(1000);
 		driver.findElement(By.xpath("(//a[text()='Save changes'])[1]")).sendKeys(Keys.ENTER);
 	}
 	
@@ -68,6 +68,7 @@ public class BootstrapModalSteps {
 	
 	@Quando("^enter no botão Save Changes do First Modal$")
 	public void clicar_no_botão_Save_Changes_do_First_Modal() throws Throwable {
+		Thread.currentThread().sleep(5000);
 		driver.findElement(By.xpath("//*[@id=\"myModal\"]/div/div/div[4]/a[2]")).sendKeys(Keys.ENTER);
 	}
 	
@@ -83,6 +84,7 @@ public class BootstrapModalSteps {
 	
 	@Quando("^clicar no botão Launch Modal$")
 	public void clicar_no_botão_Launch_Modal() throws Throwable {
+		Thread.currentThread().sleep(1000);
 		driver.findElement(By.xpath("(//a[text()='Launch modal'])[3]")).sendKeys(Keys.ENTER);
 	}
 	
@@ -95,6 +97,7 @@ public class BootstrapModalSteps {
 	
 	@Quando("^enter no botão close$")
 	public void clicarNoBotãoSaveChanges() throws Throwable {
+		Thread.currentThread().sleep(1000);
 		driver.findElement(By.xpath("(//a[text()='Close'])[2]")).sendKeys(Keys.ENTER);
 	   
 	}

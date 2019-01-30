@@ -18,7 +18,7 @@ Cenario: Modal Multiplo - Salvar Modal
          E enter no botão Save Changes do First Modal
          Entao fechar aba First Modal
 
-   
+@ignore
 Cenario: Modal Multiplo - Salvar Segundo Modal
          Dado que estou na página Bootstrap Modal Example for Automation
          Quando clicar em Launch Modal dentro de Multiple Modal Example
