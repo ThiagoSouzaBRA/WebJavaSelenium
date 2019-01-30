@@ -68,7 +68,7 @@ public class BootstrapModalSteps {
 	
 	@Quando("^enter no botão Save Changes do First Modal$")
 	public void clicar_no_botão_Save_Changes_do_First_Modal() throws Throwable {
-		driver.findElement(By.xpath("(//a[text()='Save changes'])[2]")).sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath("//*[@id=\"myModal\"]/div/div/div[4]/a[2]")).sendKeys(Keys.ENTER);
 	}
 	
 	@Entao("^fechar aba First Modal$")

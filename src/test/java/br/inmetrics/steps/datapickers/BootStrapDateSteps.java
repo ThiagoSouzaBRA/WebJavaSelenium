@@ -35,6 +35,7 @@ public class BootStrapDateSteps {
 	@Quando("^selecionar a box data$")
 	public void selecionar_a_box_data() throws Throwable {
 		driver.findElement(By.xpath("//input[@class='form-control']")).click();
+		System.out.println((driver.findElement(By.xpath("//input[@class='form-control']")).getAttribute("value")));
 	}
 
 	@Quando("^selecionar ano seguinte com base no atual ano$")
@@ -48,14 +49,15 @@ public class BootStrapDateSteps {
 		driver.findElement(By.xpath("//span[text()='" + proximoano + "']")).click(); // selecionar proximo ano
 		
 		 
-		 
 	}
 
 	@Entao("^deverá ser nulo o campo de data$")
 	public void deverá_ser_nulo_o_campo_de_data() throws Throwable {
-		if(driver.findElement(By.xpath("//*[@id=\"sandbox-container1\"]/div/input")).getAttribute("value") != null){
-			Assert.assertTrue(false);
-		}
+
+		Assert.assertTrue(driver.findElement(By.xpath("(//input[@class='form-control'])[1]")).getAttribute("value").isEmpty());
+		
+		System.out.println((driver.findElement(By.xpath("//input[@class='form-control']")).getAttribute("value")));
+		
 		Thread.currentThread().sleep(5000);
 		driver.quit();
 	}
